@@ -1,0 +1,2 @@
+access_log: 127.0.0.1 - - [22/Apr/2025:21:52:10 +0300] "GET /phpinfo HTTP/1.1" 502 166 "http://localhost/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0"
+access_log: 127.0.0.1 - - [22/Apr/2025:21:52:09 +0300] "GET /phpinfo HTTP/1.1" 502 166 "http://localhost/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0"

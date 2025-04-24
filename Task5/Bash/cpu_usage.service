@@ -1,0 +1,13 @@
+[Unit]
+Description=Cpu usage data collector
+After= basic.target network.target
+
+[Service]
+User:www-data
+Group:www-data
+ExecStart=/var/www/task3/cpu/cpu_usage.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target  
