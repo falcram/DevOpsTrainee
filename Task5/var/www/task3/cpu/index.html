@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time CPU Usage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #cpu-usage {
+            font-size: 2em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Real-time CPU Usage</h1>
+    <div id="cpu-usage">Loading...</div>
+
+    <script>
+        async function updateCpuUsage() {
+            try {
+                const response = await fetch('/cpu');
+                const data = await response.text();
+                document.getElementById('cpu-usage').innerText = data;
+            } catch (error) {
+                console.error('Error fetching CPU usage:', error);
+            }
+        }
+
+        setInterval(updateCpuUsage, 3000);
+        updateCpuUsage();
+    </script>
+</body>
+</html>

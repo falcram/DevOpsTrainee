@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3 | PlaysDev</title>
+    <style>
+        /* Основные стили PlaysDev */
+        :root {
+            --primary: #6C5CE7; /* Фиолетовый - фирменный цвет */
+            --secondary: #00CEFF; /* Голубой акцент */
+            --dark: #2D3436;
+            --light: #F5F6FA;
+            --success: #00B894;
+            --warning: #FDCB6E;
+            --danger: #D63031;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 206, 255, 0.05) 0%, transparent 20%);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before, .logo::after {
+            content: '//';
+            color: var(--secondary);
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            animation: slideUp 0.8s ease;
+        }
+
+        .link-item {
+            margin-bottom: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .link-item a {
+            display: block;
+            padding: 1rem 1.5rem;
+            background: var(--light);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-item a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
+            border-left: 4px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .link-item a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease;
+        }
+
+        .link-item a:hover::before {
+            transform: scaleY(1);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--dark);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .links-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">PlaysDev</div>
+        <h1>Ссылки</h1>
+    </div>
+
+    <div class="links-container">
+        <div class="link-item">
+            <a href="/secondpage">Second Page</a>
+        </div>
+        <div class="link-item">
+            <a href="/music">Download Music</a>
+        </div>
+        <div class="link-item">
+            <a href="/secondserver" target="_blank">Google.com</a>
+        </div>
+        <div class="link-item">
+            <a href="/redblue" target="_blank">RedBlue</a>
+        </div>
+        <div class="link-item">
+            <a href="/image1" target="_blank">JPG Image</a>
+        </div>
+        <div class="link-item">
+            <a href="/image2" target="_blank">PNG Image</a>
+        </div>
+    </div>
+
+</body>
+</html>

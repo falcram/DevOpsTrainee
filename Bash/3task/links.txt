@@ -1,0 +1,8 @@
+    <a href="/secondpage">secondpage</a>
+    <a href="/music">download music</a>
+    <a href="/phpinfo" target="_blank">information php</a>
+    <a href="/secondserver" target="_blank">google.com</a>
+    <a href="/redblue" target="_blank">redblue</a>
+    <a href="/image1" target="_blank">jpg</a>
+    <a href="/image2" target="_blank">png</a>
+    <a href="/stat">Cpu_usage </a>

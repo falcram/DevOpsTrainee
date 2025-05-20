@@ -1,0 +1,14 @@
+Task8/Petr_accessKeys.csv
+Task8/New_Trainee_key.pem
+Task8/Trainee_key.pem
+Task8/env/
+Task8/Petr_credentials.csv
+Task8/Trainee_key_dec.pem
+Task8/New_Trainee_key.pem.pub
+Petr_accessKeys.csv
+Petr_credentials.csv
+Task11/terraform.tfstate
+Task11/terraform.tfstate.backup
+Task11/.terraform.lock.hcl
+Task11/.terraform
+Trainee_key.pem
